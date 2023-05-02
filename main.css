@@ -61,7 +61,7 @@ section h2,
     margin-bottom: 8px;
 }
 
- .articles article a { /*transformando links em botões */
+.articles article a { /*transformando links em botões */
     background-color: blue;
     color: #fff;
     padding: 8px;
@@ -91,7 +91,6 @@ section h2 {
 #sports {
     background-color: rgba(0, 255, 0, 0.1);
 }
-
 #sports .articles article a {
     background-color: rgba(0, 255, 0, 0.8);
     color: #000;
@@ -100,7 +99,13 @@ section h2 {
 #economy {
     background-color: #f8f59f;
 }
-
 #economy .articles article a {
     background-color: #ff9f1a;
+}
+
+#cinema {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+#cinema .articles article a {
+    background-color: rgba(105, 105, 105, 0.8);
 }
