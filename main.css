@@ -109,3 +109,9 @@ section h2 {
 #cinema .articles article a {
     background-color: rgba(105, 105, 105, 0.8);
 }
+
+#technology .articles article a {
+    background-color: rgb(231, 231, 231);
+    border: 1.5px solid black;
+    color: rgb(43, 42, 42);
+}
