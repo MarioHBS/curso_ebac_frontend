@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação Formulário</title>
-    <link rel="stylesheet" href="./main.css" />
+    <title>Calculadora de médias</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Teste de Validação</h1>
-        <h2>preencha os campos</h2>
+    <header>
+        <img src="./images/logo.png" alt="capelo e diploma">
+        <h1>Calculadora de médias</h1>
+    </header>
 
-        <form id="form-validacao">
-            <input id="num1" type="number" placeholder="número 1" required />
-            <input id="num2" type="number" placeholder="número 2" required />
-            <button id="btn-validar" type="submit">Validar</button>
-        </form>
-        <p class="validation-message"></p>
-    </div>
+    <form>
+        <input type="text" placeholder="nome da atividade" required />
+        <input type="number" placeholder="nota da atividade" min="0" max="10" required />
+        <button type="submit">Adicionar +</button>
+    </form>
 
-    <script src="./mains.js"></script>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome da atividade</th>
+                <th>Nota da atividade</th>
+                <th>Aprovado ?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Atividade 1</td>
+                <td>7</td>
+                <td><img src="./images/aprovado.png" alt="emoji festejando" /></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Média final</td>
+                <td>7</td>
+                <td>Aprovado</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
