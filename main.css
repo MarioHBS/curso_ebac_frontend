@@ -2,116 +2,54 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body > header {
-    background-color: #2f3640;
-    padding: 16px 0;
-    color: #f5f6fa;
-}
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header li {
-    display: inline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-left: 16px;
-}
-
-header li a {
-    color: #f5f6fa;
-    text-decoration: none;
+    font-family: sans-serif;
 }
 
 .container {
-    width: 1366px;
-    margin: 0 auto;
-}
-
-.articles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.articles article img {
-    /* height: 180px; */
     width: 100%;
+    margin: 80px auto;
+    max-width: 540px;
 }
 
-.articles article {
-    width: 30%;
+form {
+    margin-top: 40px;
 }
 
-section {
-    padding: 16px 0;
-}
-
-section h2,
-.articles article {
-    margin-bottom: 16px;
-}
-
-.articles article h3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.articles article a { /*transformando links em botões */
-    background-color: blue;
-    color: #fff;
+input, button {
+    display: block;
     padding: 8px;
-    display: inline-block;
-    text-decoration: none;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+}
+
+button {
+    background-color: #4853ee;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
     font-weight: bold;
-    margin-top: 8px;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
 }
 
-.articles article a:hover {
-    text-decoration: underline;
+button:hover {
+    background-color: #2631cf;
 }
 
-.articles article p,
-.articles article a {
-    font-family: Arial, Helvetica, sans-serif;
+.validation-message {
+    font-size: 12px;
+    padding: 8px;
+    color: white;
+    display: none;
 }
 
-.articles article h3 {
-    font-size: 24px;
+p.error {
+    background-color: red;
+    display: block;
 }
-
-section h2 {
-    font-size: 32px;
-}
-
-#sports {
-    background-color: rgba(0, 255, 0, 0.1);
-}
-#sports .articles article a {
-    background-color: rgba(0, 255, 0, 0.8);
-    color: #000;
-}
-
-#economy {
-    background-color: #f8f59f;
-}
-#economy .articles article a {
-    background-color: #ff9f1a;
-}
-
-#cinema {
-    background-color: rgba(100, 100, 100, 0.4);
-}
-#cinema .articles article a {
-    background-color: rgba(105, 105, 105, 0.8);
-}
-
-#technology .articles article a {
-    background-color: rgb(231, 231, 231);
-    border: 1.5px solid black;
-    color: rgb(43, 42, 42);
+p.success {
+    background-color: green;
+    display: block;
 }
