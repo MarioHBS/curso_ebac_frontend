@@ -51,7 +51,7 @@ function atualizaMediaFinal() {
     // console.log(atividades);
     // console.log(notas);
     
-    document.getElementById('media-final-val').innerHTML = mediaFinal;
+    document.getElementById('media-final-val').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-res').innerHTML = mediaFinal >= notaMin ? spanAprovado : spanReprovado;
 
     console.log(mediaFinal);
