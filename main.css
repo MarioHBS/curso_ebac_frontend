@@ -19,14 +19,10 @@ header button {
     margin-left: 16px;
 }
 
-form {
-    background-color: #c8d6e5;
-    padding: 24px 0;
-    text-align: center;
-    display: none;
-}
-form h2 {
-    margin-bottom: 16px;
+.container {
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
 }
 
 input, button {
@@ -40,6 +36,16 @@ button {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+form h2 {
+    margin-bottom: 16px;
 }
 
 #btn-cancelar {
@@ -82,4 +88,4 @@ ul li img {
 
 ul li:hover .overlay-imagem-link {
     opacity: 1;
-}
+} */
