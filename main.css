@@ -10,18 +10,12 @@ body {
 }
 
 header {
-    /* color: #fff; */
     font-size: medium;
     font-weight: bold;
     display: flex;
     padding: 8px 0;
-    /* margin-bottom: 8px; */
     justify-content: center;
     text-transform: uppercase;
-    /* font-style: italic; */
-}
-header button {
-    margin-left: 16px;
 }
 
 .container {
@@ -35,7 +29,7 @@ input, button {
 }
 
 button {
-    background-color: #009432;
+    background-color: #5c5c46;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -54,53 +48,14 @@ ul {
     flex-wrap: wrap;
 }
 ul li {
-    /* display: flex; */
     list-style: square;
+    margin-bottom: 4px;
 }
 
-/*
-form h2 {
-    margin-bottom: 16px;
+.overlay-task {
+    cursor: pointer;
 }
 
-#btn-cancelar {
-    background-color: red;
+h3::first-letter {
+    text-transform: capitalize;
 }
-
-ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-ul li {
-    max-width: 25%;
-    list-style: none;
-    position: relative;
-    max-height: 220px;
-    overflow-y: hidden;
-}
-
-ul li img {
-    width: 100%;
-    min-height: 205px;
-}
-
-.overlay-imagem-link {
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all ease 0.3s;
-}
-
-.overlay-imagem-link a {
-    color: #fff;
-    text-decoration: none;
-}
-
-ul li:hover .overlay-imagem-link {
-    opacity: 1;
-} */
