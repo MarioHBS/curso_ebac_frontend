@@ -17,9 +17,26 @@
 <body>
     <div class="container">
         <header>
-            <h1>Galeria de Fotos</h1>
-            <button type="button">Nova Imagem +</button>
+            <h1>Lista de tarefas</h1>
         </header>
+
+        <form>
+            <input id="txt-nova-tarefa" type="text" placeholder="Inclua nova tarefa" required />
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <ul>
+            <li>
+                <div class="overlay-task">
+                    <h3>Teste de tarefa</h3>
+                </div>
+            </li>
+            <li>
+                <div class="overlay-task">
+                    <h3>Nova tarefa</h3>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <!-- <form>
@@ -27,9 +44,9 @@
         <input id="endereco-imagem-nova" type="url" placeholder="URL da imagem" />
         <button type="submit">Adicionar</button>
         <button id="btn-cancelar" type="reset">Cancelar</button>
-    </form>
+    </form> -->
 
-    <ul>
+    <!-- <ul>
         <li>
             <img src="./images/foto1.jpg" alt="Pintura de um gato" />
             <div class="overlay-imagem-link">
