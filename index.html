@@ -30,10 +30,10 @@
         <nav>
             <div class="container">
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Em destaque</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#sobre-a-loja">Sobre</a></li>
+                    <li><a href="#destaques">Em destaque</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="destaques">
         <div class="container">
             <h2>Em destaque</h2>
             <ul class="container-flex lista-veiculos">
@@ -95,7 +95,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="promocoes">
         <div class="container">
             <h2>Promoções</h2>
             <ul class="container-flex lista-veiculos">
@@ -139,7 +139,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
@@ -200,54 +200,7 @@
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#carousel-imagens').slick({
-                autoplay: true,
-            })
-
-            $('.menu-hamburguer').click(function() {
-                $('nav').slideToggle();
-            })
-
-            $('#telefone').mask('(00) 00000-0000', {placeholder: '( ) 12345-6789'})
-
-            $('form').validate({
-                rules: {
-                    nome: {
-                        required: true
-                    },
-                    email: {
-                        required: true, 
-                        email: true
-                    },
-                    telefone: {
-                        required: true
-                    },
-                    mensagem: {
-                        required: false
-                    },
-                    veiculoDeInteresse: {
-                        required: false
-                    }
-                },
-                messages: {
-                    nome: 'Por favor, insira seu nome'
-                },
-                submitHanlder: function(form) {
-                    console.log(form);
-                },
-                invalidHandler: function(evento, validator) {
-                    let camposIncorretos = validator.numberOfInvalids();
-                    console.log(camposIncorretos);
-
-                    if (camposIncorretos) {
-                        alert(`Existem ${camposIncorretos} campos incorretos`);
-                    }
-                }
-            })
-        })
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
