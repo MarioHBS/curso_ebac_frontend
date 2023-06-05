@@ -1,4 +1,4 @@
 # curso_ebac_frontend
 repositório para exercícios da EBAC
 
-Atualmente com exemplos do módulo 9
+Referente ao Exercício do módulo 9: Formulário de Cadastro
