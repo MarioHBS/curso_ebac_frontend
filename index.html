@@ -6,24 +6,66 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            padding: 50px;
-        }
-
-        #preco p {
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#preco">
-        Ver preço
-    </button>
-    <div class="collapse collapse-horizontal" id="preco">
-        <p>
-            3x de R$ 300,00
-        </p>
+    <!-- .container>(.row>.col)+.row>(.col-md-8>.container>.row>(.col-md-4>img+h4)*5)+.col-md-4>div>img -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success">
+                    Confira as novidade do blog <a href="#">clicando aqui</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Últimas postagens</h2>
+
+                <div class="container g-0">
+                    <div class="row">
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>20/07/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>20/07/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>20/07/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>20/07/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            
+                            <img src="https://via.placeholder.com/180x180" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>20/07/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-end">
+                <div>
+                    <h2>Anunciantes</h2>
+                    <img src="https:/via.placeholder.com/180x180" />
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
