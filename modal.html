@@ -31,5 +31,13 @@
         </div>
     </div>
     <script src="./lib/bootstrap_5.3.0.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalExemplo = new bootstrap.Modal('#omodal');
+            setTimeout(function() {
+                modalExemplo.show();
+            }, 3000);
+        })
+    </script>
 </body>
 </html>
