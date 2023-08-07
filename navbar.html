@@ -90,7 +90,7 @@
         </section>
     </div>
 
-    <div class="toast-container">
+    <div class="toast-container position-fixed bottom-0">
         <div id="mensagem-alerta" class="toast">
             <header class="toast-header">
                 <strong>Importante</strong>
@@ -107,7 +107,7 @@
         const mensagem = document.getElementById('mensagem-alerta');
 
         if (ativadorToast) {
-            ativadorToast.addEventListener('click', function(event) {
+            ativadorToast.addEventListener('click', function() {
                 const toast = new bootstrap.Toast(mensagem);
                 toast.show();
             })
