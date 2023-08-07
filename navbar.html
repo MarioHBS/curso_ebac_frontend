@@ -13,10 +13,23 @@
         .nav-link {
             text-align: center;
         }
+
+        section {
+            height: 100vh;
+            background-color: #ccc;
+            padding-top: 70px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header id="cabecalho">
         <div class="navbar navbar-expand-lg">
             <div class="container">
                 <h1>Titulo do site</h1>
@@ -26,22 +39,36 @@
                 <nav id="navmenu" class="collapse navbar-collapse justify-content-end">
                     <ul class="nav navbar-nav nav-pills"> <!-- navbar-nav para deixar itens sobrepostos -->
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Início</a>
+                            <a class="nav-link active" href="#inicio">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produtos</a>
+                            <a class="nav-link" href="#produtos">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Promoções</a>
+                            <a class="nav-link" href="#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+        </section>
+    </div>
 
     <script src="./lib/bootstrap_5.3.0.bundle.min.js"></script>
 </body>
