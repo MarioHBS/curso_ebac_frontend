@@ -5,8 +5,61 @@
   font-family: Roboto, sans-serif;
 }
 
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.6666666667%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product-button {
+  display: block;
+  background-color: #44bd32;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+.product-button:hover {
+  background-color: #62d151;
+}
+
+@media screen and (max-width: 767px) {
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  font-weight: bold;
+  margin-left: 24px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 body {
-  background-color: #eee;
+  background-color: #f5f6fa;
 }
 
 .container {
@@ -16,64 +69,29 @@ body {
 }
 
 header {
-  padding: 16px 0;
-  background-color: #01a3a4;
-  text-align: center;
-  color: #fff;
+  background-color: #182C61;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
-
-.form-container {
-  height: calc(100vh - 70px);
+header .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  max-width: 760px;
-}
-.form-container h2 {
-  font-size: 3em;
-  text-align: center;
-}
-.form-container form {
-  width: 100%;
-  max-width: 480px;
-  margin-top: 40px;
-}
-.form-container form label {
-  font-weight: bold;
-  cursor: pointer;
-}
-.form-container form input {
-  padding: 8px;
-  display: block;
-  width: 100%;
-  margin-bottom: 16px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 3px solid #01a3a4;
-}
-.form-container form button {
-  padding: 8px;
-  display: block;
-  width: 100%;
-  margin-bottom: 16px;
-  background-color: #00d2d3;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
-}
-.form-container form button:hover {
-  background-color: #008687;
+  padding: 16px 0;
 }
 
-@media screen and (max-width: 767px) {
+li {
+  list-style: none;
+}
+
+section {
+  padding: 56px 0;
+}
+
+@media screen and (max-width: 1023px) {
   .container {
     max-width: 80%;
-  }
-  .form-container h2 {
-    font-size: 2em;
   }
 }
 

@@ -1,5 +1,52 @@
-@use '../config/cores.scss';
+@use '../config/variaveis';
+@use "sass:math";
 
-.produtos {
-    background-color: cores.$corPrincipal;
+@function gridSize($grids) {
+    @return repeat($grids, math.div(98%, $grids));
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: gridSize(3);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+}
+.product-item {
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+}
+
+.product-button {
+    display: block;
+    background-color: variaveis.$corPrincipal;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: lighten(variaveis.$corPrincipal, $amount: 10%);
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
 }

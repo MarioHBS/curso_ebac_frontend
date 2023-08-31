@@ -1,21 +1,11 @@
-@use "sass:math";
-
-@use 'config/reset';
+@use 'config/reset.scss';
 @use 'config/variaveis.scss';
 
-@mixin elementoForm() {
-    padding: 8px;
-    display: block;
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-@function pixelPraEm($alvoPx, $contextoPx: 16px) {
-    @return math.div($alvoPx, $contextoPx)+em;
-}
+@use 'secoes/produtos.scss';
+@use 'secoes/menu.scss';
 
 body {
-    background-color: #eee;
+    background-color: variaveis.$corDeFundo;
 }
 
 .container {
@@ -25,64 +15,29 @@ body {
 }
 
 header {
-    padding: 16px 0;
-    background-color: variaveis.$corPrincipal;
-    text-align: center;
-    color: #fff;
-}
+    background-color: variaveis.$corSecundaria;
+    position: sticky;
+    top: 0;
+    left: 0;
 
-.form-container {
-    height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 760px;
-
-    h2 {
-        font-size: pixelPraEm(48px);
-        text-align: center;
-    }
-
-    form {
-        width: 100%;
-        max-width: 480px;
-        margin-top: 40px;
-
-        label {
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        input {
-            @include elementoForm();
-            background-color: transparent;
-            border: none;
-            border-bottom: 3px solid variaveis.$corPrincipal;
-        }
-
-        button {
-            @include elementoForm();
-            background-color: variaveis.$corSecundaria;
-            border: none;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            color: #fff;
-
-            &:hover {
-                background-color: darken(variaveis.$corSecundaria, 15%);
-            }
-        }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
     }
 }
 
-@media screen and (max-width: variaveis.$mobile) {
+li {
+    list-style: none;
+}
+
+section {
+    padding: 56px 0;
+}
+
+@media screen and (max-width: variaveis.$tablet) {
     .container {
         max-width: 80%;
-    }
-
-    .form-container h2 {
-        font-size: pixelPraEm(32px);
     }
 }
