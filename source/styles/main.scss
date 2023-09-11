@@ -1,8 +1,8 @@
-@use 'config/reset.scss';
-@use 'config/variaveis.scss';
+@use 'config/variaveis';
+@use 'config/reset';
 
-@use 'secoes/produtos.scss';
-@use 'secoes/menu.scss';
+@use 'secoes/produtos';
+@use 'secoes/menu';
 
 body {
     background-color: variaveis.$corDeFundo;
