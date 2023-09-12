@@ -1,0 +1,6 @@
+{
+    "watchFolder": "./src/styles",
+    "outputFolder": "./build/styles",
+    "mainFile": "main.less",
+    "sourceMap": true
+}
