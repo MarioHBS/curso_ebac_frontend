@@ -8,7 +8,14 @@ module.exports = function(grunt) {
                     'dev/styles/style.css': 'src/styles/main.less'
                 }
             },
-            production: {}
+            production: {
+                options: {
+                    compress: true
+                },
+                files: {
+                    'dist/styles/style.min.css': 'src/styles/main.less'
+                }
+            }
         },
         watch: {
             less: {
@@ -42,11 +49,49 @@ module.exports = function(grunt) {
                         dest: 'dev/'
                     }
                 ]
+            },
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'END_CSS',
+                            replacement: './styles/style.min.css'
+                        },
+                        {
+                            match: 'END_JS',
+                            replacement: './scripts/main.min.js'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['prebuild/index.html'],
+                        dest: 'dist/'
+                    }
+                ]
             }
         },
-        htmlmin: {},
-        clean: {},
-        uglify: {}
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                },
+                files: {
+                    'prebuild/index.html': 'src/index.html'
+                }
+            }
+        },
+        clean: ['prebuild'],
+        uglify: {
+            target: {
+                files: {
+                    'dist/scripts/main.min.js': 'dist/scripts/action.js'
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
