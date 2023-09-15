@@ -3,11 +3,47 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON("package.json"),
 
         less: {
-            development: {},
-            productio: {}
+            development: {
+                files: {
+                    'dev/styles/style.css': 'src/styles/main.less'
+                }
+            },
+            production: {}
         },
-        watch: {},
-        replace: {},
+        watch: {
+            less: {
+                files: ['src/styles/**/*.less'],
+                tasks: ['less:development']
+            },
+            html: {
+                files: ['src/index.html'],
+                tasks: ['replace:dev']
+            }
+        },
+        replace: {
+            dev: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'END_CSS',
+                            replacement: './styles/style.css'
+                        },
+                        {
+                            match: 'END_JS',
+                            replacement: '../src/scripts/main.js'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['src/index.html'],
+                        dest: 'dev/'
+                    }
+                ]
+            }
+        },
         htmlmin: {},
         clean: {},
         uglify: {}
