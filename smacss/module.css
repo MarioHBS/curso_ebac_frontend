@@ -1,3 +1,16 @@
+.title {
+    font-size: 48px;
+}
+
+.mensagem {
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+.mensagem-titulo {
+    font-size: 18px;
+
+}
 .mensagem-conteudo {
     font-size: 14px;
 }
@@ -21,6 +34,6 @@
     display: none;
 }
 
-.accordion-is-open .accordion-content {
+.accordion.is-open .accordion-content {
     display: block;
 }
