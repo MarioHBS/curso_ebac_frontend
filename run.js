@@ -1,16 +1,16 @@
 $(document).ready(() =>
     fetch('http://api.github.com/users/MarioHBS')
-        .then(function (response) {
-            return response.json();
-        })
+        .then((response) => response.json())
         .then(function (json) {
-            nameElm.innerText = json.name;
-            userElm.innerText = json.login;
-            // json.avatar_url;
-            // json.following;
-            // json.followers;
-            // json.public_repos;
-            // json.html_url;
+            console.log(json);
+            $('.profile-name').text(json.name);
+            $('.profile-username').text(json.login);
+            $('#count-flwn').text(json.following)// ;
+            $('#count-flwr').text(json.followers) // ;
+            $('#ocunt-repos').text(json.public_repos) // ;
+
+            $('.profile-avatar').attr('src', json.avatar_url);
+            $('.profile-link').attr('href', json.html_url);
         })
 );
 
