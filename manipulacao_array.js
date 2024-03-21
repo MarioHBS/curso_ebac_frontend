@@ -47,5 +47,6 @@ const alunos = [
 ];
 // imprimirAlunos(alunos)
 
-const alunosNaMedia = alunos.filter(aluno => aluno.getNota() >= 6);
-imprimirAlunos(alunosNaMedia);
+const filtrarPorNota = nota => alunos.filter(aluno => aluno.getNota() >= nota);
+
+imprimirAlunos(filtrarPorNota(6));
