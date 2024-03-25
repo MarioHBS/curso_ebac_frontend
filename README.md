@@ -1,8 +1,13 @@
 # curso_ebac_frontend
 repositório para exercícios da EBAC
 
-Branch referente ao Exercício do módulo 25: Utilizando Arrays e manipulando com o recurso do ES6
+Branch referente ao Exercício do módulo 26: Utilizando Typescript
 
 Tarefas:
-1. criar array de objetos, com parâmtros determinados;
-2. fazer uma filtragem com esse array
+1. escrever duas funções: multiplicação e saudação;
+2. multiplicação: recebe dois números e retorna o resultado;
+3. saudação: recebe um nome e retorna 'Olá + {nome}'
+
+obs: para inicializar projeto utilizar: 
+> 'npx tsc --init'
+> 'npx tsc' para compilar o arquivo
